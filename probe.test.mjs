@@ -9,9 +9,9 @@ test("PROBE.md enthält nur Zeilen „Realprobe JJJJ-MM-TT“", () => {
   for (const line of lines) assert.match(line, /^Realprobe \d{4}-\d{2}-\d{2}$/);
 });
 
-test("PROBE.md endet mit „Realprobe 2026-10-26“", () => {
+test("PROBE.md endet mit „Realprobe 2026-11-02“", () => {
   const lines = readFileSync("PROBE.md", "utf8").split(/\r?\n/).filter(Boolean);
-  assert.equal(lines.at(-1), "Realprobe 2026-10-26");
+  assert.equal(lines.at(-1), "Realprobe 2026-11-02");
 });
 
 test("PROBE.md behält die Zeile „Realprobe 2026-10-24“ vor der neuen Zeile", () => {
